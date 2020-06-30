@@ -10,20 +10,20 @@
 //= 1.3 Added clan helper. [exneval]
 //============================================================
 
-prontera,138,183,7	script	Clan Helper	703,{
-	mes "[Clan Helper]";
-	mes "Do you want to build connections without being in a guild?";
-	next;
-	mes "[Clan Helper]";
-	mes "Can't find the perfect guild for yourself?";
-	next;
-	mes "[Clan Helper]";
-	mes "You can join or leave clans freely! Just join!";
-	next;
-	mes "[Clan Helper]";
-	mes "Now, come on in and meet the masters of the Kingdom's best clans!";
-	close;
-}
+//prontera,138,183,7	script	Clan Helper	703,{
+//	mes "[Clan Helper]";
+//	mes "Do you want to build connections without being in a guild?";
+//	next;
+//	mes "[Clan Helper]";
+//	mes "Can't find the perfect guild for yourself?";
+//	next;
+//	mes "[Clan Helper]";
+//	mes "You can join or leave clans freely! Just join!";
+//	next;
+//	mes "[Clan Helper]";
+//	mes "Now, come on in and meet the masters of the Kingdom's best clans!";
+//	close;
+//}
 
 prt_in,33,114,5	script	Raffam Oranpere	10058,{
 	cutin "laperm01.bmp", 2;
