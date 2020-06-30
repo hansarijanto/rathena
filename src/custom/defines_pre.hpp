@@ -1,6 +1,5 @@
 // Copyright (c) rAthena Dev Teams - Licensed under GNU GPL
 // For more information, see LICENCE in the main folder
-
 #ifndef CONFIG_CUSTOM_DEFINES_PRE_HPP
 #define CONFIG_CUSTOM_DEFINES_PRE_HPP
 
@@ -12,3 +11,4 @@
 
 
 #endif /* CONFIG_CUSTOM_DEFINES_PRE_HPP */
+#define PACKETVER 20151104

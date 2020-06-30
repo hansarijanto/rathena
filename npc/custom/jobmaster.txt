@@ -51,7 +51,10 @@ function	Can_Change_Third	{
 	// * Baby Second Class
 	if( !.ThirdClass )
 		return false; // Third job change disabled
-	if( !(eaclass()&EAJL_2) )
+	// if( !(eaclass()&EAJL_2) )
+	// changed with below to require rebirth for 3rd class
+	// TODO: fix for soul linked -> soul reaper
+	if( !(eaclass()&EAJL_UPPER) )
 		return false; // Not second Class
 	if( eaclass()&EAJL_THIRD )
 		return false; // Already Third Class

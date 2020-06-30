@@ -91,3 +91,13 @@ OnInit:
 	waitingroom "Free for all",0;
 	end;
 }
+
+// custom free for all pvp room
+prontera,148,172,4	script	Fight Square Reception#8	105,{
+	callfunc "F_PVP_FSRS";
+	end;
+
+OnInit:
+	waitingroom "PVP Room",0;
+	end;
+}
