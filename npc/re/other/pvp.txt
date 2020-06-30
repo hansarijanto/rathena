@@ -92,12 +92,16 @@ OnInit:
 	end;
 }
 
-// custom free for all pvp room
-prontera,148,172,4	script	Fight Square Reception#8	105,{
-	callfunc "F_PVP_FSRS";
+
+// custom free for all pvp room & drop
+prontera,139,182,4	script	PVP Warper	105,{
+	warp "pvp_y_2-2",0,0;
 	end;
 
 OnInit:
 	waitingroom "PVP Room",0;
 	end;
 }
+
+// Get bloody coin on pvp kill
+-	script	bloody_coin_on_pvp_kill	-1,{ OnPCKillEvent: if(getmapflag(strcharinfo(3),mf_pvp)) getitem 7642, 1; }
