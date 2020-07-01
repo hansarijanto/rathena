@@ -99,7 +99,7 @@ prontera,139,182,4	script	PVP Warper	105,{
 	end;
 
 OnInit:
-	waitingroom "PVP Room",0;
+	waitingroom "PVP Free For All",0;
 	end;
 }
 

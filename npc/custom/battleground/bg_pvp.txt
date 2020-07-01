@@ -17,9 +17,12 @@
 -	script	bg_pvp#control	-1,{
 OnInit:
 	.minplayer2start = 2;      // minimum players to start (ex. if 3vs3, set to 3)
-	.eventlasting    = 20*60;  // event duration before auto-reset (20 minutes * seconds)
+	.eventlasting    = 20*60;  // event duration before auto-reset (5 minutes * seconds)
 	setarray .rewarditem[0],   // rewards for the winning team: <item>,<amount>,...
-		501, 10;
+		7642, 2;
+	end;
+	setarray .rewarditemloser[0],   // rewards for the losing team: <item>,<amount>,...
+		7642, 1;
 	end;
 OnStart:
 	if ( getwaitingroomstate( 0, .rednpcname$ ) < .minplayer2start || getwaitingroomstate( 0, .bluenpcname$ ) < .minplayer2start )
@@ -42,10 +45,12 @@ OnStart:
 	if ( .red_score > .blue_score ) {
 		mapannounce "guild_vs3", "- Red Team is victorious! -", bc_map;
 		callsub L_Reward, .red;
+		callsub R_Reward, .blue;
 	}
 	else if ( .blue_score > .red_score ) {
 		mapannounce "guild_vs3", "- Blue Team is victorious! -", bc_map;
 		callsub L_Reward, .blue;
+		callsub R_Reward, .red;		
 	}
 	else
 		mapannounce "guild_vs3", "- The match has ended in a draw! -", bc_map;
@@ -62,6 +67,12 @@ L_Reward:
 	for ( .@i = 0; .@i < $@arenamemberscount; ++.@i )
 		getitem .rewarditem[0], .rewarditem[1], $@arenamembers[.@i];
 	return;
+
+R_Reward:
+	bg_get_data getarg(0), 1;
+	for ( .@i = 0; .@i < $@arenamemberscount; ++.@i )
+		getitem .rewarditemloser[0], .rewarditemloser[1], $@arenamembers[.@i];
+	return;	
 
 // "OnDeath" event
 OnRedDead:  callsub L_Dead, .red_score;
@@ -88,23 +99,23 @@ L_Quit:
 	end;
 }
 
-prontera,152,178,5	script	Red Team#bg_pvp	733,{
+prontera,138,176,5	script	PVP Red Team#bg_pvp	733,{
 	end;
 OnInit:
 	sleep 1;
 	set getvariableofnpc( .rednpcname$, "bg_pvp#control" ), strnpcinfo(0);
 OnStart:
-	waitingroom "Red Team", getvariableofnpc( .minplayer2start, "bg_pvp#control" ) +1, "bg_pvp#control::OnStart", getvariableofnpc( .minplayer2start, "bg_pvp#control" );
+	waitingroom "PVP Red Team", getvariableofnpc( .minplayer2start, "bg_pvp#control" ) +1, "bg_pvp#control::OnStart", getvariableofnpc( .minplayer2start, "bg_pvp#control" );
 	end;
 }
 
-prontera,154,178,5	script	Blue Team#bg_pvp	734,{
+prontera,143,176,5	script	PVP Blue Team#bg_pvp	734,{
 	end;
 OnInit:
 	sleep 1;
 	set getvariableofnpc( .bluenpcname$, "bg_pvp#control" ), strnpcinfo(0);
 OnStart:
-	waitingroom "Blue Team", getvariableofnpc( .minplayer2start, "bg_pvp#control" ) +1, "bg_pvp#control::OnStart", getvariableofnpc( .minplayer2start, "bg_pvp#control" );
+	waitingroom "PVP Blue Team", getvariableofnpc( .minplayer2start, "bg_pvp#control" ) +1, "bg_pvp#control::OnStart", getvariableofnpc( .minplayer2start, "bg_pvp#control" );
 	end;
 }
 

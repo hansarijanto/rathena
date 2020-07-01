@@ -11,10 +11,10 @@
 
 -	script	bg_emp#control	-1,{
 OnInit:
-	.minplayer2start = 1;      // minimum players to start (ex. if 3vs3, set to 3)
-	.eventlasting    = 20*60;  // event duration before auto-reset (20 minutes * seconds)
+	.minplayer2start = 2;      // minimum players to start (ex. if 3vs3, set to 3)
+	.eventlasting    = 5*60;  // event duration before auto-reset (20 minutes * seconds)
 	setarray .rewarditem[0],   // rewards for the winning team: <item>,<amount>,...
-		501, 10;
+		7642, 5;
 	end;
 OnStart:
 	if ( getwaitingroomstate( 0, .rednpcname$ ) < .minplayer2start || getwaitingroomstate( 0, .bluenpcname$ ) < .minplayer2start )
@@ -96,23 +96,23 @@ L_Quit:
 	end;
 }
 
-prontera,155,182,5	script	Red Team#bg_emp	733,{
+prontera,138,171,5	script	WOE Red Team#bg_emp	733,{
 	end;
 OnInit:
 	sleep 1;
 	set getvariableofnpc( .rednpcname$, "bg_emp#control" ), strnpcinfo(0);
 OnStart:
-	waitingroom "Red Team", getvariableofnpc( .minplayer2start, "bg_emp#control" ) +1, "bg_emp#control::OnStart", getvariableofnpc( .minplayer2start, "bg_emp#control" );
+	waitingroom "WOE Red Team", getvariableofnpc( .minplayer2start, "bg_emp#control" ) +1, "bg_emp#control::OnStart", getvariableofnpc( .minplayer2start, "bg_emp#control" );
 	end;
 }
 
-prontera,158,182,5	script	Blue Team#bg_emp	734,{
+prontera,143,171,5	script	WOE Blue Team#bg_emp	734,{
 	end;
 OnInit:
 	sleep 1;
 	set getvariableofnpc( .bluenpcname$, "bg_emp#control" ), strnpcinfo(0);
 OnStart:
-	waitingroom "Blue Team", getvariableofnpc( .minplayer2start, "bg_emp#control" ) +1, "bg_emp#control::OnStart", getvariableofnpc( .minplayer2start, "bg_emp#control" );
+	waitingroom "WOE Blue Team", getvariableofnpc( .minplayer2start, "bg_emp#control" ) +1, "bg_emp#control::OnStart", getvariableofnpc( .minplayer2start, "bg_emp#control" );
 	end;
 }
 
