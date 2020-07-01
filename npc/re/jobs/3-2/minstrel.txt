@@ -310,44 +310,44 @@ prontera,140,331,6	script	Glasses-wearing Man	883,{
 	close;
 }
 
-prontera,146,218,4	script	Woman#job_min	90,{
-	if (job_min == 3) {
-		mes "[Woman]";
-		mes "Do you know who Maestro Song is?";
-		mes "I think he must be my little boy.";
-		next;
-		mes "[Woman]";
-		mes "A few years ago, he went off to sea but he never came back.";
-		next;
-		mes "[Woman]";
-		mes "He liked to sing a lot but we didn't let him sing.";
-		next;
-		mes "[Woman]";
-		mes "His father didn't like him singing much.";
-		next;
-		mes "[Woman]";
-		mes "So he broke every instrument in the house...";
-		mes "It was terrible.";
-		mes "Where is my little boy... sniff.";
-		next;
-		mes "- I can't get anymore -";
-		mes "- useful information. -";
-		mes "- I'll go back to Alberta -";
-		mes "- and talk to that Bard. -";
-		set job_min,4;
-		changequest 11137,11138;
-		close;
-	} else if (job_min == 4) {
-		mes "- I can't get any more -";
-		mes "- useful information. -";
-		mes "- Go back to Alberta. -";
-		mes "- and talk to that Bard. -";
-		close;
-	}
-	mes "[Woman]";
-	mes "Where is my little boy... sniff.";
-	close;
-}
+//prontera,146,218,4	script	Woman#job_min	90,{
+//	if (job_min == 3) {
+//		mes "[Woman]";
+//		mes "Do you know who Maestro Song is?";
+//		mes "I think he must be my little boy.";
+//		next;
+//		mes "[Woman]";
+//		mes "A few years ago, he went off to sea but he never came back.";
+//		next;
+//		mes "[Woman]";
+//		mes "He liked to sing a lot but we didn't let him sing.";
+//		next;
+//		mes "[Woman]";
+//		mes "His father didn't like him singing much.";
+//		next;
+//		mes "[Woman]";
+//		mes "So he broke every instrument in the house...";
+//		mes "It was terrible.";
+//		mes "Where is my little boy... sniff.";
+//		next;
+//		mes "- I can't get anymore -";
+//		mes "- useful information. -";
+//		mes "- I'll go back to Alberta -";
+//		mes "- and talk to that Bard. -";
+//		set job_min,4;
+//		changequest 11137,11138;
+//		close;
+//	} else if (job_min == 4) {
+//		mes "- I can't get any more -";
+//		mes "- useful information. -";
+//		mes "- Go back to Alberta. -";
+//		mes "- and talk to that Bard. -";
+//		close;
+//	}
+//	mes "[Woman]";
+//	mes "Where is my little boy... sniff.";
+//	close;
+//}
 
 airplane,222,67,6	script	Karian#job_min1	486,{
 	mes "[Karian]";
