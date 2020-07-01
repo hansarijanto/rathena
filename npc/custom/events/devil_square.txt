@@ -13,7 +13,7 @@
 //= 1.0 First version, edited. [Euphy]
 //============================================================
 
-prontera,156,185,5	script	Devil Square Guardian#1	406,{
+prontera,155,187,5	script	Devil Square Guardian#1	406,{
 	set .@gm_level, 99; // GM level required to start/stop the event
 
 	mes "[Devil Square Guardian]";
@@ -92,17 +92,29 @@ prontera,156,185,5	script	Devil Square Guardian#1	406,{
 
 OnStartEvent:
 OnClock0000:
+OnClock0100:
 OnClock0200:
+OnClock0300:
 OnClock0400:
+OnClock0500:
 OnClock0600:
+OnClock0700:
 OnClock0800:
+OnClock0900:
 OnClock1000:
+OnClock1100:
 OnClock1200:
+OnClock1300:
 OnClock1400:
+OnClock1500:
 OnClock1600:
+OnClock1700:
 OnClock1800:
+OnClock1900:
 OnClock2000:
+OnClock2100:
 OnClock2200:
+OnClock2300:
 	.start = 1;
 	disablenpc "ord11-12"; //from npc/warps/pvp.txt
 	disablenpc "Devil Square Guardian#2";
