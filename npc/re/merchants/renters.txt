@@ -267,7 +267,7 @@ prontera,125,208,5	script	Peco Peco Remover	105,{
 	mes "Mado Gears are only available for Mechanics.";
 	close;
 }
-prontera,163,178,3	duplicate(mgm)	Mado Gear Armorer#prt	105
+// prontera,163,178,3	duplicate(mgm)	Mado Gear Armorer#prt	105
 geffen,103,55,5	duplicate(mgm)	Mado Gear Armorer#gef	105
 payon,166,106,5	duplicate(mgm)	Mado Gear Armorer#pay	105
 aldebaran,133,112,5	duplicate(mgm)	Mado Gear Armorer#alde	105

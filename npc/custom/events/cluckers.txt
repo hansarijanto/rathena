@@ -25,7 +25,7 @@ prontera,156,219,4	script	Cluckers	800,{
 
 	if (.startcluck) {
 		specialeffect2 EF_HIT3;
-		switch(rand(15)) {
+		switch(rand(21)) {
 			case 0: npctalk "Cluckers : CLUUUUUUCK!!!"; unitkill getcharid(3); skilleffect "NPC_SELFDESTRUCTION",1; emotion ET_HUK; break;
 			case 1: npctalk "Cluckers : Cluuuuuck!~"; break;
 			case 2: unitkill getcharid(3); skilleffect "NPC_SELFDESTRUCTION",1; break;
@@ -41,7 +41,7 @@ prontera,156,219,4	script	Cluckers	800,{
 			case 12: sc_start SC_Stun,10000,0; break;
 			case 13: unitkill getcharid(3); skilleffect "NPC_SELFDESTRUCTION",1; break;
 			default:
-				if (rand(50) < 4) {
+				if (rand(50) < 10) {
 					npctalk "Cluckers : WOOF!...........";
 					specialeffect2 EF_SPHERE;
 					announce "[Cluck! Cluck! Boom!] " + strcharinfo(0) + " squeezed out the prize! Well done!",0;
@@ -110,8 +110,8 @@ OnTimer30000:
 OnTimer40000:
 	announce "GO! Click the chicken to get the prize!",bc_blue;
 	stopnpctimer;
-	if (!$cluck_item_id) set $cluck_item_id,512;
-	if (!$cluck_item_amount) set $cluck_item_amount,1;
+	if (!$cluck_item_id) set $cluck_item_id,671;
+	if (!$cluck_item_amount) set $cluck_item_amount,5;
 	set .startcluck,1;
 	end;
 }

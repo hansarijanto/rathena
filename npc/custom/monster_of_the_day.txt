@@ -102,6 +102,10 @@ OnInit:
 OnClock0000:
 	set .today_rotd,rand( .rotd_size );
 	set .rotd_exp_bonus,rand( 50,100 );
+	set .rotd_item_id,6480;
+	set .rotd_item_rate,30;
+	set .rotd_item_amount,1;
+	set .rotd_zeny,12000;
 	delwaitingroom;
 	waitingroom "[ROTD]:"+.rotd$[.today_rotd]+" ",0;
 	end;

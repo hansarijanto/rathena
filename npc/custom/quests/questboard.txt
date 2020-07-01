@@ -18,7 +18,7 @@
 // 1.6.5 Bug fixes for party support
 // 1.6.6 Bug fixes for delay time does not appear [mazvi]
 //============================================================
-prontera,129,215,5	script	Questboard	4_BOARD3,{
+prontera,155,178,5	script	Questboard	4_BOARD3,{
 
 	if(c_run==true){
 		mes "[^FF7700Questboard^000000]";
@@ -308,7 +308,7 @@ OnInit:
 	set .quest_delay, 0;
 
 	//Activate/Deactivate repeatable quests (true/1 - activated, false/0 - deactivated)
-	set .quest_repeat, true;
+	set .quest_repeat, false;
 
 	//Activate/Deactivate party support (true/1 - activated, false/0 - deactivated)
 	set .party_support, true;
@@ -321,7 +321,7 @@ OnInit:
 	set .questsloaded, true;
 
 	//Add Collection Quests here (You can add as many required items as you want)
-	//AddCollection("<Quest Name>",<Min Lvl>,<Max Lvl>,<Reward|Item ID>,<Reward|Item Amount>,<Zeny Reward>,<Base EXP>,<Job EXP>,<Item ID>,<Item Amount>,...);
+	AddCollection("Red Potion",1,175,701,10,100000,1000000,1000000,710,10);
 
 
 	//Add Hunting Quests here (You can add as many required mobs as you want)
