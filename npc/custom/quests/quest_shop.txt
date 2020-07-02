@@ -26,8 +26,9 @@
 //	callfunc "qshop"{,<shop ID>{,<shop ID>{,...}}};
 //  ADD YOUR NPC HERE
 //============================================================
-prontera,163,174,6	script	Headgear Quest Shop#1	998,{ callfunc "qshop",1,2; }
+prontera,163,174,6	script	Poring Quest Shop#1	998,{ callfunc "qshop",1,2; }
 prontera,141,180,6	script	PVP Quest Shop#1	998,{ callfunc "qshop",3,4,5; }
+prontera,163,170,6	script	Costume Quest Shop#1	998,{ callfunc "qshop",6; }
 // prontera,163,175,6	script	Quest Shop#2	998,{ callfunc "qshop",1,2; }	// call the shop 1 and 2 defined below
 // etc.. Add your Shop NPCs 'Quest Shop#XXX' here
 //============================================================
@@ -73,7 +74,8 @@ OnInit:
 		"Animal Headgears", // Shop Named 2
 		"PVP Accessory",	// Shop Named 3
 		"PVP Armor",	    // Shop Named 4
-		"PVP Weapon";	    // Shop Named 5
+		"PVP Weapon",	    // Shop Named 5
+		"Wings";	    	// Shop Named 6
 
 // -----------------------------------------------------------
 //  Quest items -- do NOT use a reward item more than once!
@@ -161,6 +163,20 @@ OnInit:
 	Add(5,1738,1,0,0,7642,50);
 	Add(5,13306,1,0,0,7642,50);
 	Add(5,1379,1,0,0,7642,50);
+
+// Shop 6 Costume - Wings
+	Add(6,20500,1,0,0,949,100,916,100,7115,100,7063,100);
+	Add(6,20511,1,0,0,949,100,916,100,7115,100,7063,100);
+	Add(6,20727,1,0,0,949,100,916,100,7115,100,7063,100);
+	Add(6,20764,1,0,0,949,100,916,100,7115,100,7063,100);
+	Add(6,20762,1,0,0,949,100,916,100,7115,100,7063,100);	
+	Add(6,20761,1,0,0,949,100,916,100,7115,100,7063,100);
+	Add(6,20737,1,0,0,949,100,916,100,7115,100,7063,100);
+	Add(6,20502,1,0,0,949,100,916,100,7115,100,7063,100);
+	Add(6,20746,1,0,0,949,100,916,100,7115,100,7063,100);
+	Add(6,20510,1,0,0,949,100,916,100,7115,100,7063,100);
+	Add(6,20509,1,0,0,949,100,916,100,7115,100,7063,100);
+	Add(6,20516,1,0,0,949,100,916,100,7115,100,7063,100);
 
 // -----------------------------------------------------------
 
@@ -312,3 +328,4 @@ function	script	qshop	{
 -	shop	qshop3	-1,909:-1
 -	shop	qshop4	-1,909:-1
 -	shop	qshop5	-1,909:-1
+-	shop	qshop6	-1,909:-1
